@@ -11,5 +11,5 @@ RUN mvn clean package -DskipTests
 FROM openjdk:21-jdk-slim
 WORKDIR /app
 COPY --from=build /app/apigateway/target/*.jar apigateway.jar
-EXPOSE 8080
+EXPOSE 8081
 ENTRYPOINT ["java","-jar","apigateway.jar"]

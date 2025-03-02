@@ -15,5 +15,5 @@ RUN mvn clean package -DskipTests
 FROM openjdk:21-jdk-slim
 WORKDIR /app
 COPY --from=build /app/notificationservice/target/*.jar notificationservice.jar
-EXPOSE 9003
+EXPOSE 9002
 ENTRYPOINT ["java","-jar","notificationservice.jar"]

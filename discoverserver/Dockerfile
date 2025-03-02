@@ -9,5 +9,5 @@ RUN mvn clean package -DskipTests
 FROM openjdk:21-jdk-slim
 WORKDIR /app
 COPY --from=build /app/discoverserver/target/*.jar discoverserver.jar
-EXPOSE 8761
+EXPOSE 8762
 ENTRYPOINT ["java","-jar","discoverserver.jar"]
